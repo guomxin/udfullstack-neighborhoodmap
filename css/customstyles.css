@@ -1,0 +1,33 @@
+.page_title {
+    padding: 15px 5px 15px 5px;
+}
+
+.menubar_width {
+    min-width: 300px;
+}
+
+.menubar_hr {
+    border: 1px solid rgb(255,255,255);
+}
+
+.location_list {
+    padding: 3px 5px 5px 5px;
+}
+
+.info_title {
+    font-size: 1.3em;
+}
+
+.info_category {
+    font-size: 1em;
+}
+
+.info_address {
+    font-size: .9em;
+    margin-bottom: 0;
+}
+
+.filter {
+    width: 100%;
+    font-size: .9em;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Neighborhood Map</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/customstyles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-2 collapse bg-inverse menubar_width" id="menubar">
+                <h4 class="page_title text-white">Neighborhood Map</h4>
+                <!-- Filter input -->
+                <input class="filter" data-bind="textInput: filterText, valueUpdate: 'afterkeydown'" placeholder="Location keyword">
+                <hr class="menubar_hr">
+                <ul class="nav flex-column" data-bind="foreach: shownLocations">
+                    <a href="#"><li class="nav-item text-white location_list" data-bind="text: title, click: $parent.populateInfoWindowAndHighlightMarker"></li></a>
+                </ul>
+            </nav>
+            <main class="col p-0 bg-inverse">
+                <a href class="float-left m-2 navbar-inverse" data-target="#menubar" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="content">
+                    <!-- Map Content -->
+                    <div id="map">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/lib/knockout-3.4.2.js" charset="utf-8">
+    </script>
+    <script src="js/lib/jquery.min.js" charset="utf-8">
+    </script>
+    <script src="js/lib/tether.min.js" charset="utf-8">
+    </script>
+    <script src="js/lib/bootstrap.min.js" charset="utf-8">
+    </script>
+
+    <script src="js/locations.js" charset="utf-8">
+    </script>
+
+    <script src="js/app.js" charset="utf-8">
+    </script>
+
+    <script src="js/size.js" charset="utf-8">
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBRTschOElF6NRclmCZymKOoGb0jKlNtfU&callback=initPage"
+        onerror="googleMapError()">
+    </script>
+</body>
+</html>
